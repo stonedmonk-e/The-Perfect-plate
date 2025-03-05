@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+html {
+    font-family: "Nunito";
+    font-size: 12px;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: #FFF8D6;
+}
+
+.container {
+    width: 100%;
+    height: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.brand {
+    text-align: center;
+    font-size: 6rem;
+    color: #5E454B;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background-color: white;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    background-color: white;
+    display: inline-block;
+}
+
+form ion-icon {
+    width: 8%;
+    font-size: 3rem;
+    margin-bottom: -8px;
+    color: rgb(75, 75, 75);
+    display: inline-block;
+}
+
+.search-result {
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-gap: 25px;
+    grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.item {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #F7E1AE;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-result .title {
+    color: #617A55;
+    margin: 20px 10px 0 0;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.view-btn {
+    text-decoration: none;
+    text-align: center;
+    width: 130px;
+    padding: 10px 0;
+    background-color: #617A55;
+    color: whitesmoke;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.item-data {
+    color: black;
+    display: block;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    line-height: 2rem;
+}
+
+.container.initial .brand {
+    font-size: 7rem;
+}
+
+.container.initial form {
+    max-width: 800px;
+}
+
+.container.initial form input {
+    padding: 20px;
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .search-result {
+        grid-gap: 10px;
+    }
+
+    .container.initial .brand {
+        font-size: 4rem;
+    }
+
+    .container.initial form {
+        max-width: 500px;
+    }
+
+    .container.initial form input {
+        padding: 10px;
+        font-size: 2rem;
+    }
+}
+
+
+
+/* Styles for the slider button */
+.switch {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: rgb(26, 26, 27);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px rgb(26, 26, 27);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Styles for the container holding the slider button */
+.slider-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1;
+}
